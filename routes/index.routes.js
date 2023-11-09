@@ -34,7 +34,7 @@ router.get("/form", (req, res) => {
     }, 2000)
   });
 
-  Promise.all([characters, episodes]) //// THE METHODS CAN BE THE PARAMETERS OF PROMISE ALL
+  Promise.all([characters, episodes]) //// THE METHODS CAN BE THE PARAMETERS OF PROMISE ALL (no need to create new promises, methods already are)
     .then(([charactersFound, episodesFound]) => {
       res.render("form", { charactersFound, episodesFound })
       //console.log(episodesFound, charactersFound)
