@@ -1,0 +1,19 @@
+<h1>Add the character to the episode:</h1>
+<form action="/character/add-to-episode" method="POST">
+
+    <label for="character">Select the character</label>
+    <select name="characterId">
+
+       {{#each charactersFound}}
+        <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+     
+    </select>
+    <label for="episode">Select the episode</label>
+    <select name="episodeId">
+        {{#each episodesFound}}
+        <option value="{{this._id}}">{{this.title}}</option>
+        {{/each}}
+    </select>
+    <button type="submit">Submit</button>
+</form>
